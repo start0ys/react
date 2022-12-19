@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+ /* body 스타일 */
+ html, body {
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  font-size: 14px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* 캘린더 위의 해더 스타일(날짜가 있는 부분) */
+.fc-header-toolbar {
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.nomalBtn{
+  color: #fff;
+  background-color: #76828e;
+  border-color: #76828e;
+}
+.activeBtn{
+  color: #fff;
+  background-color: #1a252f;
+  border-color: #151e27;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+#calendar-container{
+  width: 50%;
+  float: left;
+  height: 665px;
+}
+#todolist-container{
+  width: 50%; 
+  float: right; 
+  height: 665px;
+  /* height: 626px; */
+}
+@media screen and (max-width: 767px) {
+  #calendar-container{
+    width: 100%;
+  }
+  #todolist-container{
+    width: 100%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+td.todoList a.fc-daygrid-day-number::before{
+  content: "";
+  background: #ff1965;
+  margin: 5px 0 0 1px;
+  width: 5px;
+  height: 4px;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  top: -9px;
+  left: -3px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.bold {font-weight: bold;}
+.text-center {text-align: center;}
+.f17{font-size: 17px;}
+.f18{font-size: 18px;}
+.f23{font-size: 23px;}
+.f32{font-size: 32px;}
+.timeZone{border-bottom: 1px dotted; padding: 8px 0px;}
+.left{float: left;}
+.right{float: right;}
+.todo{width: 50%; height: 500px;}
+.todo-input{width: 60%; height: 40px;}
